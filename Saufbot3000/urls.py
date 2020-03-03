@@ -13,12 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import os
+
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.shortcuts import redirect
 from django.urls import path, include
 
+from Saufbot3000 import settings
+
 urlpatterns = [
-    path("", lambda request: redirect("api/v1/mixer", permanent=False)),
     path('admin/', admin.site.urls),
     path("api/v1/beverage", include("beverage.urls")),
     path("api/v1/beverage/<id>", include("beverage.urls")),
