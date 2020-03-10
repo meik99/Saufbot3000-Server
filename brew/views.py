@@ -3,6 +3,10 @@ from django.shortcuts import render
 import django.http
 
 # Create your views here.
-def index(request, id=0):
+from configuration.facade.brew_facade import BrewFacade
 
+
+def index(request, id=0):
+    _id = int(id)
+    BrewFacade().brew(_id)
     return HttpResponse(status=201)

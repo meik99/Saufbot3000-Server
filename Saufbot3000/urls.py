@@ -31,4 +31,5 @@ urlpatterns = [
     path("api/v1/recipe/<id>", include("recipe.urls")),
     path("api/v1/recipe-beverage", include("recipe_beverage.urls")),
     path("api/v1/recipe-beverage/<id>", include("recipe_beverage.urls")),
+    path("api/v1/brew/<id>", include("brew.urls")),
 ]
