@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET")
 DEBUG = (os.getenv("DJANGO_DEBUG") is None)
 
 ALLOWED_HOSTS = [
-    "0.0.0.0"
+    "*"
 ]
 
 
